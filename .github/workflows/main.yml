@@ -1,0 +1,29 @@
+name: Deploy CloudFormation
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  deploy-cloudformation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+        role-to-assume: arn:aws:iam::590183905103:role/newtestuser
+    
+    - name: Deploy CloudFormation Stack
+      run: |
+        aws cloudformation deploy \
+          --test.yaml \
+          --stack-name teststack \
+          --region us-east-1 \
+          --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
