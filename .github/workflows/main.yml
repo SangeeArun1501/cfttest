@@ -24,6 +24,6 @@ jobs:
       run: |
         aws cloudformation deploy \
           --test.yaml \
-          --stack-name teststack \
+          --stack-name stackfromgit \
           --region us-east-1 \
           --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
