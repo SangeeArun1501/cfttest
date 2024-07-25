@@ -11,4 +11,5 @@ Resources:
       ImageId: ami-0e872aee57663ae2d
       InstanceType: t2.micro
       KeyName: awscli
+      
   
