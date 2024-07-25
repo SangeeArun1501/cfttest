@@ -1,11 +1,11 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: Template to create EC2 and S3 using CFT using Github 
 Resources:
-  S3_Bucket:
+  S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: s3bucketwithgit
-  EC2_Instance:
+  EC2Instance:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0e872aee57663ae2d
