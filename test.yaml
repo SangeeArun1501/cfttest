@@ -1,5 +1,4 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: Template to create EC2 and S3 using CFT using Github 
 Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
@@ -11,5 +10,3 @@ Resources:
       ImageId: ami-0e872aee57663ae2d
       InstanceType: t2.micro
       KeyName: awscli
-      
-  
