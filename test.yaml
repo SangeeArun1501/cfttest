@@ -3,7 +3,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: s3bucketwithgit
+      BucketName: s3bucketwithgitsync.com
   EC2Instance:
     Type: AWS::EC2::Instance
     Properties:
